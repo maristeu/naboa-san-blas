@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Tags SEO de Alta Conversão -->
+    <title>Veleiro Naboa em San Blas | Charter Privativo All-Inclusive no Panamá</title>
+    <meta name="description" content="Aluguel privativo do Veleiro Naboa (Bavaria 39 pés) em San Blas, Panamá. Experiência all-inclusive com gastronomia a bordo, tripulação brasileira e Starlink.">
+    <meta name="keywords" content="Veleiro Naboa, san blas sailing, san blas sailing experience, san blas sailing tour, san blas sailing charter, private boat san blas islands, passeio san blas panama, veleiro em san blas, san blas panamá pacotes, guna yala panama">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (WhatsApp & Redes Sociais) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Veleiro Naboa San Blas | Experiência Privativa All-Inclusive">
+    <meta property="og:description" content="Navegue pelas águas cristalinas de San Blas a bordo de um Bavaria Yacht 39 pés com tripulação brasileira dedicada e conforto absoluto.">
+    <meta property="og:image" content="hero-veleiro.webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Schema.org JSON-LD (SEO Local e GEO para IAs) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristTrip",
+      "name": "Charter Privativo Veleiro Naboa San Blas",
+      "description": "Experiência all-inclusive de veleiro em San Blas no Panamá a bordo do Bavaria Yacht 39 pés com tripulação brasileira.",
+      "provider": {
+        "@type": "TravelAgency",
+        "name": "Veleiro Naboa San Blas Sailing",
+        "telephone": "+5519991990001",
+        "priceRange": "USD 550 - USD 850 por noite"
+      },
+      "touristType": "Casais, famílias e pequenos grupos buscando charter exclusivo no Caribe"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0A192F;
+            --accent: #C5A880;
+            --accent-hover: #B3966E;
+            --bg-light: #F9F9F6;
+            --bg-dark: #071120;
+            --text-dark: #1C232D;
+            --text-light: #F9F9F6;
+            --text-muted: #64748B;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Inter', system-ui, sans-serif;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { font-family: var(--font-sans); background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* Botões */
+        .btn-premium {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 1.25rem 2.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid var(--accent);
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+        .btn-premium:hover { background-color: transparent; color: var(--accent); transform: translateY(-2px); }
+
+        .section-title { font-family: var(--font-serif); font-size: 2.75rem; color: var(--primary); font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
+        .section-subtitle { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); font-weight: 700; margin-bottom: 0.75rem; display: block; }
+
+        /* Header */
+        header { position: absolute; top: 0; left: 0; width: 100%; z-index: 10; padding: 2rem 0; border-bottom: 1px solid rgba(249, 249, 246, 0.1); }
+        header .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--font-serif); color: var(--text-light); font-size: 1.75rem; text-decoration: none; }
+        .logo span { font-family: var(--font-sans); font-size: 0.7rem; display: block; letter-spacing: 0.3em; color: var(--accent); text-transform: uppercase; }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            background: linear-gradient(rgba(7, 17, 32, 0.65), rgba(7, 17, 32, 0.8)), 
+                        url('hero-veleiro.webp') no-repeat center center/cover;
+        }
+        .hero-content { max-width: 750px; padding-top: 4rem; }
+        .hero-content h1 { font-family: var(--font-serif); font-size: 3.5rem; font-weight: 400; line-height: 1.15; margin-bottom: 1.5rem; }
+        .hero-content p { font-size: 1.2rem; font-weight: 300; color: rgba(249, 249, 246, 0.9); margin-bottom: 2.5rem; }
+
+        /* Sobre e Tripulação */
+        .about { padding: 8rem 0; background-color: var(--bg-light); }
+        .grid-about { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .crew-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .crew-box { background: #ffffff; padding: 1.5rem; border-left: 3px solid var(--accent); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .crew-box h4 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--primary); }
+        .crew-box span { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.5rem; }
+        .crew-box p { font-size: 0.9rem; color: var(--text-muted); }
+        .about-image img { width: 100%; height: 520px; object-fit: cover; border-radius: 2px; }
+
+        /* Inclusões / All inclusive */
+        .inclusions { padding: 8rem 0; background-color: var(--primary); color: var(--text-light); }
+        .inclusions .section-title { color: var(--text-light); }
+        .grid-inclusions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+        .inc-card { background-color: var(--bg-dark); padding: 2.5rem 2rem; border: 1px solid rgba(197, 168, 128, 0.15); }
+        .inc-card h3 { font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent); }
+        .inc-card ul { list-style: none; }
+        .inc-card ul li { font-size: 0.95rem; margin-bottom: 0.75rem; position: relative; padding-left: 1.5rem; color: rgba(249,249,246,0.85); }
+        .inc-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        /* Preços / Investimento */
+        .pricing { padding: 8rem 0; background-color: var(--bg-light); }
+        .price-table { background: #ffffff; border: 1px solid rgba(0,0,0,0.08); margin-top: 3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+        .price-row { display: grid; grid-template-columns: 2fr 1fr; padding: 1.5rem 2.5rem; border-bottom: 1px solid rgba(0,0,0,0.05); align-items: center; }
+        .price-row:last-child { border-bottom: none; }
+        .price-row.highlight { background-color: rgba(197, 168, 128, 0.08); font-weight: 600; }
+        .price-val { font-family: var(--font-serif); font-size: 1.5rem; color: var(--primary); text-align: right; }
+        .price-note { font-size: 0.85rem; color: var(--text-muted); margin-top: 1.5rem; text-align: center; }
+
+        /* Logística / FAQ */
+        .logistics { padding: 8rem 0; background-color: #ffffff; }
+        .grid-logistics { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+        .log-box { background: var(--bg-light); padding: 2.5rem; border-top: 4px solid var(--primary); }
+        .log-box h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--primary); margin-bottom: 1rem; }
+        .log-box p { font-size: 0.95rem; color: var(--text-dark); margin-bottom: 1rem; }
+        .log-price { font-weight: 700; color: var(--accent); display: block; font-size: 1.1rem; }
+
+        /* FAQ SEO */
+        .faq-section { padding: 8rem 0; background-color: var(--bg-light); border-top: 1px solid #eee; }
+        .faq-item { margin-bottom: 2rem; background: #ffffff; padding: 2rem; box-shadow: 0 4px 20px rgba(0,0,0,0.01); border-left: 3px solid var(--accent); }
+
+        /* CTA */
+        .cta-section {
+            padding: 9rem 0;
+            background: linear-gradient(rgba(7, 17, 32, 0.85), rgba(7, 17, 32, 0.9)), 
+                        url('cta-sanblas.webp') no-repeat center center/cover;
+            text-align: center;
+            color: var(--text-light);
+        }
+        .cta-content h2 { font-family: var(--font-serif); font-size: 3.25rem; margin-bottom: 1.5rem; }
+
+        /* Footer */
+        footer { background-color: var(--bg-dark); color: rgba(249, 249, 246, 0.5); padding: 3rem 0; font-size: 0.85rem; border-top: 1px solid rgba(197, 168, 128, 0.05); }
+        footer .container { display: flex; justify-content: space-between; align-items: center; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .grid-about, .grid-inclusions, .grid-logistics, .crew-cards { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.4rem; }
+            .section-title { font-size: 2rem; }
+            .price-row { grid-template-columns: 1fr; text-align: left; gap: 0.5rem; }
+            .price-val { text-align: left; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                NABOA <span>San Blas Sailing</span>
+            </a>
+            <a href="https://wa.me/5519991990001?text=Ol%C3%A1%2C%20Capit%C3%A3o%20Marcelo!%20Gostaria%20de%20consultar%20disponibilidade%20para%20o%20Veleiro%20Naboa." target="_blank" class="btn-premium">Reservar Agora</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-subtitle">A forma mais exclusiva de conhecer San Blas</span>
+                <h1>Charter Privativo no Veleiro Naboa — Caribe All-Inclusive</h1>
+                <p>Descubra o paradisíaco arquipélago de San Blas a bordo de um Bavaria Yacht 39 pés. Uma experiência privativa, sofisticada e conduzida no seu ritmo em águas intocadas do Panamá.</p>
+                <a href="https://wa.me/5519991990001?text=Ol%C3%A1%2C%20Capit%C3%A3o%20Marcelo!%20Gostaria%20de%20consultar%20disponibilidade%20para%20o%20Veleiro%20Naboa." target="_blank" class="btn-premium">Consultar Datas com o Capitão</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre & Tripulação -->
+    <section class="about">
+        <div class="container">
+            <div class="grid-about">
+                <div class="about-text">
+                    <span class="section-subtitle">Navegação Segura & Hospitalidade</span>
+                    <h2 class="section-title">Dias Encantadores em Águas Paradisíacas</h2>
+                    <p>Navegue entre ilhas intocadas com ancoragens tranquilas e atendimento 100% personalizado. Um charter exclusivo pensado para casais, famílias ou pequenos grupos de até 4 pessoas que desejam viver o Caribe de forma íntima e sofisticada.</p>
+                    
+                    <div class="crew-cards">
+                        <div class="crew-box">
+                            <span>Capitão</span>
+                            <h4>Marcelo</h4>
+                            <p>Mais de 15 anos de experiência. Navegação profissional, segura e dedicada ao seu bem-estar.</p>
+                        </div>
+                        <div class="crew-box">
+                            <span>Anfitriã & Cozinheira</span>
+                            <h4>Elisa Regina</h4>
+                            <p>Hospitalidade calorosa a bordo e alta gastronomia preparada com atenção a cada detalhe.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="tripulacao-marcelo-elisa.webp" alt="Capitão Marcelo e Elisa Regina a bordo do Veleiro Naboa em San Blas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tudo Incluso -->
+    <section class="inclusions">
+        <div class="container">
+            <span class="section-subtitle">Sem Custo Oculto</span>
+            <h2 class="section-title">O Que Está Incluído no Seu Charter All-Inclusive</h2>
+
+            <div class="grid-inclusions">
+                <div class="inc-card">
+                    <h3>Gastronomia & Bebidas</h3>
+                    <ul>
+                        <li>Café da manhã, almoço e jantar preparados a bordo</li>
+                        <li>Vinhos selecionados (tinto e branco), cervejas e rum</li>
+                        <li>Sucos, refrigerantes, água com e sem gás</li>
+                        <li>Churrasqueira a bordo para grelhados frescos</li>
+                    </ul>
+                </div>
+                <div class="inc-card">
+                    <h3>Tecnologia & Lazer</h3>
+                    <ul>
+                        <li>Internet Wi-Fi via Starlink ilimitada a bordo</li>
+                        <li>Equipamentos completos de Snorkel</li>
+                        <li>Stand Up Paddle (SUP) e Caiaque</li>
+                        <li>Tender (bote de apoio motorizado)</li>
+                    </ul>
+                </div>
+                <div class="inc-card">
+                    <h3>Exclusividade Total</h3>
+                    <ul>
+                        <li>Bavaria Yacht 39 pés 100% privativo (sem terceiros)</li>
+                        <li>Exploração diária de ilhas (uma ancoragem por dia)</li>
+                        <li>Roteiro flexível adaptado ao seu ritmo</li>
+                        <li>Tripulação dedicada em tempo integral</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investimento / Tabela de Preços -->
+    <section class="pricing">
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <span class="section-subtitle">Investimento em Memórias Inesquecíveis</span>
+                <h2 class="section-title">Valores da Experiência Privativa</h2>
+                <p>Mínimo de 2 pernoites (recomendado de 3 a 4 noites para imersão completa). Valores por noite em Dólar Americano (USD).</p>
+            </div>
+
+            <div class="price-table">
+                <div class="price-row">
+                    <div><strong>1 Pessoa</strong> (Uso Exclusivo do Veleiro)</div>
+                    <div class="price-val">USD 550 <span style="font-size:0.8rem">/ noites</span></div>
+                </div>
+                <div class="price-row">
+                    <div><strong>2 Pessoas</strong> (Casal ou Dupla)</div>
+                    <div class="price-val">USD 650 <span style="font-size:0.8rem">/ noites</span></div>
+                </div>
+                <div class="price-row">
+                    <div><strong>3 Pessoas</strong></div>
+                    <div class="price-val">USD 750 <span style="font-size:0.8rem">/ noites</span></div>
+                </div>
+                <div class="price-row highlight">
+                    <div><strong>4 Pessoas</strong> (Capacidade Máxima da Embarcação)</div>
+                    <div class="price-val">USD 850 <span style="font-size:0.8rem">/ noites</span></div>
+                </div>
+            </div>
+            <p class="price-note">* Alta temporada (Dezembro a Fevereiro e Feriados Prolongados): valores sujeitos a ajuste de até 20% conforme demanda.</p>
+        </div>
+    </section>
+
+    <!-- Logística -->
+    <section class="logistics">
+        <div class="container">
+            <span class="section-subtitle">Como Chegar ao Veleiro</span>
+            <h2 class="section-title">Opções de Logística até San Blas</h2>
+
+            <div class="grid-logistics">
+                <div class="log-box">
+                    <h3>Opção 1: Terra + Lancha Rápida</h3>
+                    <p>Saída às 05:00 da Cidade do Panamá em veículo 4x4 até o porto de Cartí, seguido de transporte em lancha nativa até o Veleiro Naboa (chegada entre 10:00 e 11:00).</p>
+                    <span class="log-price">USD 150 por pessoa (Ida e Volta)</span>
+                </div>
+                <div class="log-box">
+                    <h3>Opção 2: Avioneta (Voo Panorâmico)</h3>
+                    <p>Voo privativo ou compartilhado de apenas 45 minutos da Cidade do Panamá pousando direto na pista da ilha de Coração de Jesus, bem ao lado do veleiro.</p>
+                    <span class="log-price">USD 180 a USD 250 por pessoa (Por trecho)</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; background: #fff8f0; padding: 1.5rem; border-left: 3px solid var(--accent); font-size: 0.9rem;">
+                <strong>Custos Adicionais da Região Exigidos pelas Autoridades:</strong>
+                Taxa de Entrada na Comarca Guna Yala: <strong>USD 25 por pessoa</strong> | Taxas Portuárias Locais: <strong>USD 3 por pessoa</strong>.
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO FAQ (SEO STRATEGY) -->
+    <section class="faq-section">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <span class="section-subtitle" style="text-align: center; display: block;">Dúvidas Frequentes</span>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">Planejando seu San Blas Sailing</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem;">Como funciona o passeio de veleiro em San Blas?</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dark); font-weight: 300;">Oferecemos uma experiência de San Blas sailing inteiramente privada e com sistema all-inclusive. Você e seu grupo terão o uso exclusivo do veleiro Naboa (Bavaria Yacht 39 pés), com tripulação dedicada (capitão e cozinheira), refeições completas, bebidas selecionadas e equipamentos de lazer inclusos.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem;">Qual é a melhor logística para os tours a San Blas desde Panamá?</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dark); font-weight: 300;">Existem duas formas principais de transfer partindo da Cidade do Panamá: por via aérea (voo de 45 minutos em avioneta até Coração de Jesus, custando entre USD 180 e USD 250 por trecho por pessoa) ou via terrestre combinada com lancha (saída às 5h da manhã com chegada por volta das 10h-11h, custando USD 150 ida e volta por pessoa).</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem;">Qual é o tempo mínimo recomendado de hospedagem em San Blas?</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dark); font-weight: 300;">Para aproveitar ao máximo o arquipélago de San Blas no Panamá, operamos com um mínimo de 2 pernoites. No entanto, para vivenciar a verdadeira navegação em San Blas de forma relaxante e conhecer as ilhas mais intocadas, recomendamos uma estadia de 3 a 4 noites.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--primary); margin-bottom: 1rem;">Há custos adicionais além do aluguel do veleiro em San Blas?</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-dark); font-weight: 300;">Sim, a região é uma comarca indígena autônoma (Guna Yala). Os visitantes devem pagar diretamente às autoridades locais a Taxa Guna Yala de USD 25 por pessoa e taxas locais de ilhas de USD 3 por pessoa. Esses valores não estão inclusos na diária do charter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <span class="section-subtitle">Capacidade Altamente Limitada</span>
+                <h2>Pronto para viver o melhor do tour de veleiro no Panamá?</h2>
+                <p>Entre em contato diretamente com o Capitão Marcelo para consultar o calendário de vagas e garantir as datas perfeitas para o seu grupo de forma exclusiva.</p>
+                <a href="https://wa.me/5519991990001?text=Ol%C3%A1%2C%20Capit%C3%A3o%20Marcelo!%20Vim%20pelo%20site%20e%20gostaria%20de%20reservar%20o%20Veleiro%20Naboa." class="btn-premium" target="_blank">Falar com o Capitão no WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; Naboa San Blas Sailing. Todos os direitos reservados.</p>
+            <p>San Blas &amp; Cidade do Panamá, Panamá.</p>
+        </div>
+    </footer>
+
+    <!-- MARCAÇÃO ESTRUTURADA DE SEO (SCHEMA ORG) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Como funciona o passeio de veleiro em San Blas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oferecemos uma experiência de San Blas sailing inteiramente privada e com sistema all-inclusive. Você e seu grupo terão o uso exclusivo do veleiro Naboa (Bavaria Yacht 39 pés), com tripulação dedicada (capitão e cozinheira), refeições completas, bebidas selecionadas e equipamentos de lazer inclusos."
+        }
+      },{
+        "@type": "Question",
+        "name": "Qual é a melhor logística para os tours a San Blas desde Panamá?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Existem duas formas principais de transfer partindo da Cidade do Panamá: por via aérea (voo de 45 minutos em avioneta até Coração de Jesus) ou via terrestre combinada com lancha (saída às 5h da manhã com chegada por volta das 10h-11h)."
+        }
+      },{
+        "@type": "Question",
+        "name": "Qual é o tempo mínimo recomendado de hospedagem em San Blas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para aproveitar ao máximo o arquipélago de San Blas no Panamá, operamos com um mínimo de 2 pernoites. No entanto, recomendamos uma estadia de 3 a 4 noites."
+        }
+      },{
+        "@type": "Question",
+        "name": "Há custos adicionais além do aluguel do veleiro em San Blas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim, os visitantes devem pagar diretamente às autoridades locais a Taxa Guna Yala de USD 25 por pessoa e taxas locais de ilhas de USD 3 por pessoa."
+        }
+      }]
+    }
+    </script>
+
+</body>
+</html>
