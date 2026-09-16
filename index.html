@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-    <!-- Schema.org JSON-LD (SEO Local e GEO para IAs) -->
+    <!-- Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -108,9 +108,93 @@
         .crew-box span { font-size: 0.8rem; color: var(--accent); text-transform: uppercase; font-weight: 600; display: block; margin-bottom: 0.5rem; }
         .crew-box p { font-size: 0.9rem; color: var(--text-muted); }
         
-        /* Layout com 2 fotos na seção Sobre */
-        .about-image-grid { display: flex; flex-direction: column; gap: 1.25rem; }
-        .about-image-grid img { width: 100%; height: 250px; object-fit: cover; border-radius: 2px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        /* Carrossel de Fotos */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background-color: #000;
+        }
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+            display: block;
+            background-color: var(--bg-dark);
+        }
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(7, 17, 32, 0.85));
+            color: #fff;
+            padding: 1.5rem 1rem 0.8rem 1rem;
+            font-size: 0.85rem;
+            text-align: center;
+            letter-spacing: 0.05em;
+        }
+        /* Botões do Carrossel */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(10, 25, 47, 0.6);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            z-index: 5;
+        }
+        .carousel-btn:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+        .carousel-btn.prev { left: 12px; }
+        .carousel-btn.next { right: 12px; }
+
+        /* Pontos Indicadores */
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            z-index: 5;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .dot.active {
+            background: var(--accent);
+            width: 24px;
+            border-radius: 4px;
+        }
 
         /* Inclusões / All inclusive */
         .inclusions { padding: 8rem 0; background-color: var(--primary); color: var(--text-light); }
@@ -191,7 +275,7 @@
         </div>
     </section>
 
-    <!-- Sobre & Tripulação -->
+    <!-- Sobre & Tripulação com Carrossel -->
     <section class="about">
         <div class="container">
             <div class="grid-about">
@@ -213,9 +297,42 @@
                         </div>
                     </div>
                 </div>
-                <div class="about-image-grid">
-                    <img src="tripulacao-marcelo-elisa.webp" alt="Capitão Marcelo e Elisa Regina a bordo do Veleiro Naboa em San Blas">
-                    <img src="bavaria-39.webp" alt="Veleiro Bavaria Yacht 39 pés em San Blas Panamá">
+
+                <!-- Carrossel Interativo -->
+                <div class="carousel-container">
+                    <div class="carousel-slides" id="carouselSlides">
+                        <div class="slide">
+                            <img src="tripulacao-marcelo-elisa.webp" alt="Capitão Marcelo e Elisa Regina a bordo do Veleiro Naboa">
+                            <div class="slide-caption">Tripulação Brasileira: Capitão Marcelo & Elisa Regina</div>
+                        </div>
+                        <div class="slide">
+                            <img src="bavaria-39.webp" alt="Veleiro Bavaria Yacht 39 pés em San Blas Panamá">
+                            <div class="slide-caption">Cockpit & Deck do Veleiro Bavaria Yacht 39 Pés</div>
+                        </div>
+                        <div class="slide">
+                            <img src="sanblas-praia.webp" alt="Praias e Ilhas de San Blas no Panamá">
+                            <div class="slide-caption">Águas Cristalinas e Ilhas Exclusivas de Guna Yala</div>
+                        </div>
+                        <div class="slide">
+                            <img src="gastronomia-bordo.webp" alt="Gastronomia all-inclusive a bordo do Veleiro Naboa">
+                            <div class="slide-caption">Gastronomia All-Inclusive Fresca Preparada a Bordo</div>
+                        </div>
+                        <div class="slide">
+                            <img src="lazer-sup.webp" alt="Stand Up Paddle e lazer aquático em San Blas">
+                            <div class="slide-caption">Stand Up Paddle, Caiaque e Snorkel Inclusos</div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+
+                    <div class="carousel-dots" id="carouselDots">
+                        <span class="dot active" onclick="goToSlide(0)"></span>
+                        <span class="dot" onclick="goToSlide(1)"></span>
+                        <span class="dot" onclick="goToSlide(2)"></span>
+                        <span class="dot" onclick="goToSlide(3)"></span>
+                        <span class="dot" onclick="goToSlide(4)"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -316,7 +433,7 @@
         </div>
     </section>
 
-    <!-- SEÇÃO FAQ (SEO STRATEGY) -->
+    <!-- FAQ SEO -->
     <section class="faq-section">
         <div class="container" style="max-width: 800px; margin: 0 auto;">
             <span class="section-subtitle" style="text-align: center; display: block;">Dúvidas Frequentes</span>
@@ -366,41 +483,42 @@
         </div>
     </footer>
 
-    <!-- MARCAÇÃO ESTRUTURADA DE SEO (SCHEMA ORG) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Como funciona o passeio de veleiro em San Blas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oferecemos uma experiência de San Blas sailing inteiramente privada e com sistema all-inclusive. Você e seu grupo terão o uso exclusivo do veleiro Naboa (Bavaria Yacht 39 pés), com tripulação dedicada (capitão e cozinheira), refeições completas, bebidas selecionadas e equipamentos de lazer inclusos."
+    <!-- LÓGICA DO CARROSSEL DE IMAGENS -->
+    <script>
+        let currentSlide = 0;
+        const slides = document.getElementById('carouselSlides');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = dots.length;
+        let slideInterval = setInterval(nextSlide, 5000);
+
+        function updateCarousel() {
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
         }
-      },{
-        "@type": "Question",
-        "name": "Qual é a melhor logística para os tours a San Blas desde Panamá?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Existem duas formas principais de transfer partindo da Cidade do Panamá: por via aérea (voo de 45 minutos em avioneta até Coração de Jesus) ou via terrestre combinada com lancha (saída às 5h da manhã com chegada por volta das 10h-11h)."
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            updateCarousel();
+            resetTimer();
         }
-      },{
-        "@type": "Question",
-        "name": "Qual é o tempo mínimo recomendado de hospedagem em San Blas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Para aproveitar ao máximo o arquipélago de San Blas no Panamá, operamos com um mínimo de 2 pernoites. No entanto, recomendamos uma estadia de 3 a 4 noites."
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+            resetTimer();
         }
-      },{
-        "@type": "Question",
-        "name": "Há custos adicionais além do aluguel do veleiro em San Blas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, os visitantes devem pagar diretamente às autoridades locais a Taxa Guna Yala de USD 25 por pessoa e taxas locais de ilhas de USD 3 por pessoa."
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
         }
-      }]
-    }
+
+        function resetTimer() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
     </script>
 
 </body>
